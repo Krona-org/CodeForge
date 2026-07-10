@@ -13,11 +13,70 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->codeTextEdit->setPlainText(R"(#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <memory>
+
+class Shape {
+public:
+    virtual ~Shape() = default;
+    virtual double area() const = 0;
+    virtual void print() const = 0;
+};
+
+class Circle : public Shape {
+    double radius;
+public:
+    explicit Circle(double r) : radius(r) {}
+    double area() const override { return 3.14159 * radius * radius; }
+    void print() const override {
+        std::cout << "Circle with radius " << radius
+                  << ", area = " << area() << std::endl;
+    }
+};
+
+class Rectangle : public Shape {
+    double width, height;
+public:
+    Rectangle(double w, double h) : width(w), height(h) {}
+    double area() const override { return width * height; }
+    void print() const override {
+        std::cout << "Rectangle " << width << "x" << height
+                  << ", area = " << area() << std::endl;
+    }
+};
+
+int main()
+{
+    std::vector<std::unique_ptr<Shape>> shapes;
+    shapes.push_back(std::make_unique<Circle>(5.0));
+    shapes.push_back(std::make_unique<Rectangle>(4.0, 6.0));
+
+    std::sort(shapes.begin(), shapes.end(),
+        [](const auto &a, const auto &b) {
+            return a->area() < b->area();
+        });
+
+    for (const auto &shape : shapes) {
+        shape->print();
+    }
+
+    return 0;
+}
+)");
+
+ui->codeFileNameLabel->setText("shapes_demo.cpp");
+
+
+
     setBackgroundImage(":/res/image/white_back.png"); // дефолтная картинка
     //ui->widgetDriverList->setStyleSheet(StyleHelper::getGlassStyle());
     //ui->widgetDiagrama->setStyleSheet(StyleHelper::getGlassStyle());
     
     updateBackground();
+    fitCodeEditHeight();
 }
 
 void MainWindow::setBackgroundImage(const QString &path)
@@ -90,4 +149,13 @@ void MainWindow::updateProgress()
         return;
     }
     ui->progressBar->setValue(value + 1);
+}
+
+void MainWindow::fitCodeEditHeight()
+{
+    QPlainTextEdit *edit = ui->codeTextEdit;
+    QFontMetrics fm(edit->font());
+    int lineCount = edit->document()->blockCount();
+    int contentHeight = fm.lineSpacing() * lineCount + 5; // +28 — небольшой запас под padding
+    edit->setFixedHeight(contentHeight);
 }

@@ -33,5 +33,6 @@ private slots:
     void q_groupBox();
     void setupSideBar(); // новый метод
     void updateProgress();
+     void fitCodeEditHeight();
     
 };

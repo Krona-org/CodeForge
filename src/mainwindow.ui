@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>963</width>
-    <height>744</height>
+    <height>781</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,6 +33,15 @@
     <string notr="true"/>
    </property>
    <layout class="QGridLayout" name="gridLayout">
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
     <item row="1" column="0">
      <widget class="QWidget" name="widget" native="true">
       <layout class="QGridLayout" name="gridLayout_2">
@@ -42,57 +51,566 @@
        <property name="spacing">
         <number>0</number>
        </property>
-       <item row="0" column="2">
-        <widget class="QWidget" name="widget_2" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>200</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>30</height>
-          </size>
+       <item row="2" column="2">
+        <widget class="QWidget" name="mainContentWidget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>1</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(17, 23, 24);
-border: 1px solid rgb(30, 44, 46);
-border-left: 0px;
-</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QProgressBar" name="progressBar">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>2</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QProgressBar {
-    background-color: rgb(17, 23, 24);
-    border: none;
-}
-QProgressBar::chunk {
-    background-color: rgb(255, 140, 0);
+          <string notr="true">QWidget#mainContentWidget {
+    background-color: rgb(12, 16, 17);
+    border: 1px solid rgb(30, 44, 46);
+    border-left: 0px;
+    border-top: 0px;
 }</string>
          </property>
-         <property name="value">
-          <number>20</number>
-         </property>
-         <property name="textVisible">
-          <bool>false</bool>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Orientation::Horizontal</enum>
-         </property>
-         <property name="format">
-          <string>%p%</string>
-         </property>
+         <layout class="QVBoxLayout" name="mainContentLayout">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page">
+             <layout class="QGridLayout" name="gridLayout_3">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>6</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>6</number>
+              </property>
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea">
+                <property name="styleSheet">
+                 <string notr="true">QScrollArea {
+    border: 0px;
+}
+QScrollBar:vertical {
+    background: rgb(12, 16, 17);
+    width: 2px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background: rgb(255, 140, 0);
+    border-radius: 3px;
+    min-height: 24px;
+}
+QScrollBar::handle:vertical:hover {
+    background: rgb(255, 178, 56);
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}</string>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>791</width>
+                   <height>689</height>
+                  </rect>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_4">
+                  <item row="2" column="0">
+                   <widget class="QWidget" name="optionsWidget" native="true">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>710</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <layout class="QVBoxLayout" name="optionsLayout">
+                     <property name="spacing">
+                      <number>8</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QRadioButton" name="optionRadio1">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>44</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QRadioButton {
+    background-color: rgb(17, 23, 24);
+    color: rgb(199, 212, 210);
+    border: 1px solid rgb(33, 48, 50);
+    border-radius: 6px;
+    padding-left: 16px;
+}
+QRadioButton:hover {
+    background-color: rgb(22, 30, 32);
+    border-color: rgb(51, 64, 63);
+}
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>aab</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QRadioButton" name="optionRadio2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>44</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QRadioButton {
+    background-color: rgb(17, 23, 24);
+    color: rgb(199, 212, 210);
+    border: 1px solid rgb(33, 48, 50);
+    border-radius: 6px;
+    padding-left: 16px;
+}
+QRadioButton:hover {
+    background-color: rgb(22, 30, 32);
+    border-color: rgb(51, 64, 63);
+}
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>abb</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QRadioButton" name="optionRadio3">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>44</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QRadioButton {
+    background-color: rgb(17, 23, 24);
+    color: rgb(199, 212, 210);
+    border: 1px solid rgb(33, 48, 50);
+    border-radius: 6px;
+    padding-left: 16px;
+}
+QRadioButton:hover {
+    background-color: rgb(22, 30, 32);
+    border-color: rgb(51, 64, 63);
+}
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>bbb</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QRadioButton" name="optionRadio4">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>44</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QRadioButton {
+    background-color: rgb(17, 23, 24);
+    color: rgb(199, 212, 210);
+    border: 1px solid rgb(33, 48, 50);
+    border-radius: 6px;
+    padding-left: 16px;
+}
+QRadioButton:hover {
+    background-color: rgb(22, 30, 32);
+    border-color: rgb(51, 64, 63);
+}
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>abc</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QRadioButton" name="optionRadio5">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>44</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QRadioButton {
+    background-color: rgb(17, 23, 24);
+    color: rgb(199, 212, 210);
+    border: 1px solid rgb(33, 48, 50);
+    border-radius: 6px;
+    padding-left: 16px;
+}
+QRadioButton:hover {
+    background-color: rgb(22, 30, 32);
+    border-color: rgb(51, 64, 63);
+}
+QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>aaa</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QWidget" name="widget_4" native="true">
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>55</height>
+                     </size>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout">
+                     <item>
+                      <widget class="QLabel" name="questionEyebrowLabel">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel#questionEyebrowLabel {
+    color: rgb(255, 178, 56);
+    border: none;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>// ВОПРОС 8 ИЗ 40</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="questionTitleLabel">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>13</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel#questionTitleLabel {
+    color: rgb(242, 248, 246);
+    border: none;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>Что выведет следующий код (C++17)?</string>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QFrame" name="codePanel">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>710</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame#codePanel {
+    background-color: rgb(10, 13, 14);
+    border: 1px solid rgb(33, 48, 50);
+    border-radius: 8px;
+}</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="codePanelLayout">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QLabel" name="codeFileNameLabel">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>34</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>9</pointsize>
+                         <italic>true</italic>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLabel#codeFileNameLabel {
+    color: rgb(94, 117, 118);
+    border: none;
+    border-bottom: 1px solid rgb(33, 48, 50);
+    padding-left: 14px;
+}</string>
+                       </property>
+                       <property name="text">
+                        <string>question_08.cpp</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="CodePlainTextEdit" name="codeTextEdit">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>710</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Consolas</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPlainTextEdit#codeTextEdit {
+    background-color: rgb(10, 13, 14);
+    color: rgb(199, 212, 210);
+    border: none;
+    padding: 14px;
+}</string>
+                       </property>
+                       <property name="verticalScrollBarPolicy">
+                        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+                       </property>
+                       <property name="horizontalScrollBarPolicy">
+                        <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+                       </property>
+                       <property name="lineWrapMode">
+                        <enum>QPlainTextEdit::LineWrapMode::NoWrap</enum>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                       <property name="plainText">
+                        <string>#include &lt;iostream&gt;
+
+int main(int, char**)
+{
+    char c1 = 'a';
+    decltype(c1) c2 = c1;
+    ++c2;
+    decltype((c1)) c3 = c1;
+    ++c3;
+
+    std::cout &lt;&lt; c1 &lt;&lt; c2 &lt;&lt; c3 &lt;&lt; std::endl;
+    return 0;
+}</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_2"/>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item row="0" column="0" rowspan="3">
@@ -189,6 +707,59 @@ border-top: 0px;
          </layout>
         </widget>
        </item>
+       <item row="0" column="2">
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(17, 23, 24);
+border: 1px solid rgb(30, 44, 46);
+border-left: 0px;
+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>2</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QProgressBar {
+    background-color: rgb(17, 23, 24);
+    border: none;
+}
+QProgressBar::chunk {
+    background-color: rgb(255, 140, 0);
+}</string>
+         </property>
+         <property name="value">
+          <number>20</number>
+         </property>
+         <property name="textVisible">
+          <bool>false</bool>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="format">
+          <string>%p%</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -205,6 +776,13 @@ border-top: 0px;
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CodePlainTextEdit</class>
+   <extends>QPlainTextEdit</extends>
+   <header>codeplaintextedit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../resources.qrc"/>
  </resources>

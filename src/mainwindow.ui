@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>963</width>
+    <width>1180</width>
     <height>781</height>
    </rect>
   </property>
@@ -139,7 +139,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>791</width>
+                   <width>968</width>
                    <height>689</height>
                   </rect>
                  </property>
@@ -154,7 +154,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>710</width>
+                      <width>800</width>
                       <height>16777215</height>
                      </size>
                     </property>
@@ -184,7 +184,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>800</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -226,7 +226,7 @@ QRadioButton::indicator {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>800</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -268,7 +268,7 @@ QRadioButton::indicator {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>800</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -310,7 +310,7 @@ QRadioButton::indicator {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>800</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -352,7 +352,7 @@ QRadioButton::indicator {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>800</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -412,8 +412,8 @@ QRadioButton::indicator {
                        </property>
                        <property name="font">
                         <font>
-                         <family>Consolas</family>
-                         <pointsize>9</pointsize>
+                         <family>Noto Sans</family>
+                         <pointsize>8</pointsize>
                         </font>
                        </property>
                        <property name="styleSheet">
@@ -474,7 +474,7 @@ QRadioButton::indicator {
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>710</width>
+                      <width>800</width>
                       <height>16777215</height>
                      </size>
                     </property>
@@ -517,7 +517,7 @@ QRadioButton::indicator {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>800</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -551,14 +551,14 @@ QRadioButton::indicator {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>800</width>
                          <height>16777215</height>
                         </size>
                        </property>
                        <property name="font">
                         <font>
-                         <family>Consolas</family>
-                         <pointsize>10</pointsize>
+                         <family>Noto Sans</family>
+                         <pointsize>12</pointsize>
                         </font>
                        </property>
                        <property name="styleSheet">
@@ -659,7 +659,7 @@ int main(int, char**)
             </property>
             <property name="minimumSize">
              <size>
-              <width>160</width>
+              <width>200</width>
               <height>150</height>
              </size>
             </property>
@@ -686,13 +686,13 @@ border: 1px solid rgb(30, 44, 46);
             </property>
             <property name="minimumSize">
              <size>
-              <width>160</width>
+              <width>200</width>
               <height>0</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>160</width>
+              <width>200</width>
               <height>16777215</height>
              </size>
             </property>
@@ -702,6 +702,7 @@ border: 1px solid rgb(30, 44, 46);
 border-top: 0px;
 </string>
             </property>
+            <layout class="QVBoxLayout" name="verticalLayout_2"/>
            </widget>
           </item>
          </layout>
@@ -770,7 +771,7 @@ QProgressBar::chunk {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>963</width>
+     <width>1180</width>
      <height>30</height>
     </rect>
    </property>

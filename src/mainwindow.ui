@@ -95,8 +95,8 @@ QProgressBar::chunk {
          </property>
         </widget>
        </item>
-       <item row="0" column="0" rowspan="3" alignment="Qt::AlignmentFlag::AlignTop">
-        <widget class="QWidget" name="sideBarWidget" native="true">
+       <item row="0" column="0" rowspan="3">
+        <widget class="QWidget" name="leftPanelWidget" native="true">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -106,41 +106,87 @@ QProgressBar::chunk {
          <property name="minimumSize">
           <size>
            <width>160</width>
-           <height>150</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>200</width>
-           <height>300</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(17, 23, 24);
-border: 1px solid rgb(30, 44, 46);
-</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QWidget" name="widget_3" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>160</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>160</width>
+           <width>200</width>
            <height>16777215</height>
           </size>
          </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(17, 23, 24);
+         <layout class="QVBoxLayout" name="leftPanelLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="sideBarWidget" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>160</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(17, 23, 24);
 border: 1px solid rgb(30, 44, 46);
 </string>
-         </property>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_3" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>160</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>160</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(17, 23, 24);
+border: 1px solid rgb(30, 44, 46);
+border-top: 0px;
+</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>

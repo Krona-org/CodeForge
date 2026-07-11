@@ -73,6 +73,7 @@ ui->codeFileNameLabel->setText("shapes_demo.cpp");
     updateBackground();
     fitCodeEditHeight();
     setupSideBar();
+    //ui->stackedWidget->setCurrentWidget(0);
 }
 
 void MainWindow::setBackgroundImage(const QString &path) // метод который принимает путь картнки в качестве аргумента

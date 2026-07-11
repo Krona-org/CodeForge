@@ -1,8 +1,6 @@
 #include <qapplication.h>
 #include "mainwindow.h"
 
-#include "gallonConverter.hpp"
-
 using namespace std;
 
 void task1();

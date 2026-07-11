@@ -18,7 +18,7 @@ public:
         int frame = frameWidth() * 2;
         return QSize(QPlainTextEdit::sizeHint().width(), docHeight + frame + 28);
     }
-
+    
     QSize minimumSizeHint() const override
     {
         return sizeHint();

@@ -10,6 +10,7 @@ SmoothScrollArea::SmoothScrollArea(QWidget *parent)
     m_animation->setTargetObject(verticalScrollBar());
     m_animation->setPropertyName("value");
     m_animation->setEasingCurve(QEasingCurve::OutCubic);
+    m_animation->setDuration(250);
 }
 
 void SmoothScrollArea::wheelEvent(QWheelEvent *event)
@@ -23,12 +24,11 @@ void SmoothScrollArea::wheelEvent(QWheelEvent *event)
     }
 
     int delta = event->angleDelta().y();
-    int step = bar->singleStep() * 3;
+    int step = bar->singleStep() * 6;       // число управляет за колисество скролла
 
     m_targetValue -= (delta > 0 ? step : -step);
     m_targetValue = qBound(bar->minimum(), m_targetValue, bar->maximum());
 
-    m_animation->setDuration(250);
     m_animation->setStartValue(bar->value());
     m_animation->setEndValue(m_targetValue);
     m_animation->start();

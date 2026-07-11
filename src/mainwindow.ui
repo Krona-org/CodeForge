@@ -106,7 +106,7 @@
                <number>0</number>
               </property>
               <item row="0" column="0">
-               <widget class="QScrollArea" name="scrollArea">
+               <widget class="SmoothScrollArea" name="scrollArea">
                 <property name="styleSheet">
                  <string notr="true">QScrollArea {
     border: 0px;
@@ -782,6 +782,12 @@ QProgressBar::chunk {
    <class>CodePlainTextEdit</class>
    <extends>QPlainTextEdit</extends>
    <header>codeplaintextedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SmoothScrollArea</class>
+   <extends>QScrollArea</extends>
+   <header>smoothscrollarea.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

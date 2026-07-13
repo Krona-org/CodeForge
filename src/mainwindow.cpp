@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     fitCodeEditHeight();
     setupSideBar();
     //ui->stackedWidget->setCurrentWidget(0);
+
 }
 
 void MainWindow::setBackgroundImage(const QString &path) // метод который принимает путь картнки в качестве аргумента
@@ -56,12 +57,6 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-void MainWindow::on_pushButton_clicked()
-{
-
-}
-
 void MainWindow::q_groupBox()
 {
 
@@ -112,4 +107,67 @@ void MainWindow::fitCodeEditHeight()
     // жёстко фиксируем: скроллить некуда
     edit->verticalScrollBar()->setRange(0, 0);
     edit->verticalScrollBar()->setValue(0);
+}
+
+
+
+void MainWindow::goToPage(int index)
+{
+    int count = ui->stackedWidget->count();
+    if (index < 0 || index >= count)
+        return; // защита от выхода за границы
+
+    ui->stackedWidget->setCurrentIndex(index);
+
+    // если у тебя прогресс-бар привязан к номеру вопроса/страницы:
+    // int percent = static_cast<int>((index + 1) * 100.0 / count);
+    // ui->progressBar->setValue(percent);
+}
+
+// ---- Страница 1 (page, index 0) ----
+void MainWindow::on_pushButton_1_clicked() // Назад
+{
+    goToPage(ui->stackedWidget->currentIndex() - 1);
+}
+
+void MainWindow::on_pushButton_2_clicked() // Ответить
+{
+    goToPage(ui->stackedWidget->currentIndex() + 1);
+}
+
+void MainWindow::on_pushButton_3_clicked() // Пропустить
+{
+    goToPage(ui->stackedWidget->currentIndex() + 1);
+}
+
+// ---- Страница 2 (page_2, index 1) ----
+void MainWindow::on_pushButton_4_clicked() // Назад
+{
+    goToPage(ui->stackedWidget->currentIndex() - 1);
+}
+
+void MainWindow::on_pushButton_5_clicked() // Ответить
+{
+    goToPage(ui->stackedWidget->currentIndex() + 1);
+}
+
+void MainWindow::on_pushButton_6_clicked() // Пропустить
+{
+    goToPage(ui->stackedWidget->currentIndex() + 1);
+}
+
+// ---- Страница 3 (page_3, index 2) ----
+void MainWindow::on_pushButton_7_clicked() // Назад
+{
+    goToPage(ui->stackedWidget->currentIndex() - 1);
+}
+
+void MainWindow::on_pushButton_8_clicked() // Ответить
+{
+    goToPage(ui->stackedWidget->currentIndex() + 1);
+}
+
+void MainWindow::on_pushButton_9_clicked() // Пропустить
+{
+    goToPage(ui->stackedWidget->currentIndex() + 1);
 }

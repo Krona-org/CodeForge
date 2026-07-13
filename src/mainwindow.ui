@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1129</width>
+    <width>1170</width>
     <height>983</height>
    </rect>
   </property>
@@ -139,8 +139,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>302</width>
-                   <height>1058</height>
+                   <width>769</width>
+                   <height>891</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_4">
@@ -592,7 +592,7 @@ int main(int, char**)
                     </property>
                     <layout class="QGridLayout" name="gridLayout_7">
                      <item row="0" column="0">
-                      <widget class="QPushButton" name="pushButton">
+                      <widget class="QPushButton" name="pushButton_1">
                        <property name="text">
                         <string>Назад</string>
                        </property>
@@ -833,8 +833,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>302</width>
-                   <height>810</height>
+                   <width>769</width>
+                   <height>891</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
@@ -844,7 +844,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <item row="0" column="0">
                    <widget class="QWidget" name="widget_5" native="true">
                     <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
@@ -859,7 +859,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                      <item>
                       <widget class="QLabel" name="questionEyebrowLabel_2">
                        <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
@@ -1384,7 +1384,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>917</width>
+                   <width>958</width>
                    <height>891</height>
                   </rect>
                  </property>
@@ -1824,7 +1824,7 @@ QCheckBox::indicator:checked {
                   <item row="0" column="0">
                    <widget class="QWidget" name="widget_8" native="true">
                     <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
@@ -1839,7 +1839,7 @@ QCheckBox::indicator:checked {
                      <item>
                       <widget class="QLabel" name="questionEyebrowLabel_3">
                        <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
@@ -2145,7 +2145,7 @@ QProgressBar::chunk {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1129</width>
+     <width>1170</width>
      <height>30</height>
     </rect>
    </property>

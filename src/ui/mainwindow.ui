@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1170</width>
-    <height>983</height>
+    <height>793</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -139,8 +139,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>769</width>
-                   <height>891</height>
+                   <width>302</width>
+                   <height>1058</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_4">
@@ -833,8 +833,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>769</width>
-                   <height>891</height>
+                   <width>302</width>
+                   <height>810</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
@@ -1385,7 +1385,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                    <x>0</x>
                    <y>0</y>
                    <width>958</width>
-                   <height>891</height>
+                   <height>701</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_10">
@@ -1403,20 +1403,65 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                     <layout class="QGridLayout" name="gridLayout_11">
                      <item row="0" column="0">
                       <widget class="QPushButton" name="pushButton_7">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	font-family: &quot;IBM Plex Mono&quot;;
+    font-weight: 500;
+    background-color: rgb(17, 23, 24);
+    color: rgb(199, 212, 210);
+    border: 1px solid rgb(33, 48, 50);
+    border-radius: 4px;
+	padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(22, 30, 32);
+    border-color: rgb(51, 64, 63);
+}
+</string>
+                       </property>
                        <property name="text">
                         <string>Назад</string>
                        </property>
                       </widget>
                      </item>
-                     <item row="0" column="2">
-                      <widget class="QPushButton" name="pushButton_9">
-                       <property name="text">
-                        <string>Пропустить</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item row="0" column="1">
                       <widget class="QPushButton" name="pushButton_8">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>IBM Plex Mono</family>
+                         <pointsize>10</pointsize>
+                         <fontweight>DemiBold</fontweight>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	font-family: &quot;IBM Plex Mono&quot;;
+    font-weight: 600;
+	background-color: rgb(248, 173, 54);
+	color: rgb(0, 0, 0);
+    border: 1px solid rgb(167, 115, 37);
+    border-radius: 4px;
+	padding: 8px 16px;
+}
+
+QPushButton:hover {
+    border: 2px solid rgb(255, 255, 255);
+}
+</string>
+                       </property>
                        <property name="text">
                         <string>Ответить</string>
                        </property>
@@ -1427,13 +1472,58 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                        <property name="orientation">
                         <enum>Qt::Orientation::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Policy::Expanding</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>498</width>
                          <height>20</height>
                         </size>
                        </property>
                       </spacer>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QPushButton" name="pushButton_9">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="sizeIncrement">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="baseSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	font-family: &quot;IBM Plex Mono&quot;;
+    font-weight: 500;
+    background-color: rgb(17, 23, 24);
+    color: rgb(199, 212, 210);
+    border: 1px solid rgb(33, 48, 50);
+    border-radius: 4px;
+	padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(22, 30, 32);
+    border-color: rgb(51, 64, 63);
+}
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Пропустить</string>
+                       </property>
+                      </widget>
                      </item>
                     </layout>
                    </widget>
@@ -2170,7 +2260,7 @@ QProgressBar::chunk {
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../resources.qrc"/>
+  <include location="../../resources.qrc"/>
  </resources>
  <connections/>
 </ui>

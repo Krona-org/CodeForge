@@ -3,25 +3,28 @@
 #include <qpixmap.h>
 #include <qpainter.h>
 #include <QWidget>
+#include <QLabel>
+#include <QPushButton>
+
+#include <qscrollbar.h>
+
+#include "codesize.hpp"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "stypehelper.hpp"
-#include <QLabel>
-#include <QPushButton>
-#include <QTimer>
-#include <qscrollbar.h>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     ui->codeFileNameLabel->setText("shapes_demo.cpp");
-    setBackgroundImage(":/res/image/white_back.png"); // дефолтная картинка
-    updateBackground();
-    fitCodeEditHeight();
+    //setBackgroundImage(":/res/image/white_back.png"); // дефолтная картинка
+    //updateBackground();                                    // обновление заднего фона по мере растяжения картинки (сейчас не работает)
     setupSideBar();
     //ui->stackedWidget->setCurrentWidget(0);
-
+    CodeSize::fitCodeEditHeight(ui->codeTextEdit);
 }
+
+MainWindow::~MainWindow() { delete ui;} 
 
 void MainWindow::setBackgroundImage(const QString &path) // метод который принимает путь картнки в качестве аргумента
 {
@@ -29,7 +32,7 @@ void MainWindow::setBackgroundImage(const QString &path) // метод кото�
     updateBackground();
 }
 
-void MainWindow::updateBackground() // метод отвечающий ща отрисовку заднего фона ( например картинки )
+void MainWindow::updateBackground() // метод отвечающий за отрисовку заднего фона ( например картинки )
 {
     if (m_originalPixmap.isNull())
         return; // на случай если путь неверный
@@ -53,14 +56,6 @@ void MainWindow::resizeEvent(QResizeEvent *event) // метод отвечаюз
     QMainWindow::resizeEvent(event); // обязательно вызвать родительский
     updateBackground();
 }
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-void MainWindow::q_groupBox()
-{
-
-}
 void MainWindow::setupSideBar() // метод, который заполняет сайдБар интерактивными кнопками
 {
     QStringList items = {"Главная", "Настройки", "Профиль", "Выход", "кнопка еще " };
@@ -78,38 +73,6 @@ void MainWindow::setupSideBar() // метод, который заполняет
     }
     ui->verticalLayout_2->addStretch();
 }
-
-void MainWindow::updateProgress() // метод, управляющий прогресс баром
-{
-    int value = ui->progressBar->value();
-    if (value >= 100) {
-        progressTimer->stop();
-        return;
-    }
-    ui->progressBar->setValue(value + 1);
-}
-
-void MainWindow::fitCodeEditHeight()
-{
-    QPlainTextEdit *edit = ui->codeTextEdit;
-    QFontMetrics fm(edit->font());
-    int lineCount = edit->document()->blockCount();
-
-    // небольшой запас увеличь, т.к. document margin + frame тоже съедают пиксели
-    int docMargin = edit->document()->documentMargin();
-    int contentHeight = fm.lineSpacing() * lineCount
-                         + docMargin * 2
-                         + edit->frameWidth() * 2
-                         + 10; // доп. запас
-
-    edit->setFixedHeight(contentHeight);
-
-    // жёстко фиксируем: скроллить некуда
-    edit->verticalScrollBar()->setRange(0, 0);
-    edit->verticalScrollBar()->setValue(0);
-}
-
-
 
 void MainWindow::goToPage(int index)
 {

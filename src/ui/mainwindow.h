@@ -27,15 +27,11 @@ private:
 
     Ui::MainWindow *ui;
     QPixmap m_originalPixmap;
-    QTimer *progressTimer;      // тайммер обновления  прогресс бара
 
 private slots:
-    void q_groupBox();
     void setupSideBar(); // новый метод
-    void updateProgress();
-    void fitCodeEditHeight();
     
-    void on_pushButton_1_clicked();   // "Назад" page 1
+    void on_pushButton_1_clicked(); // "Назад" page 1
     void on_pushButton_2_clicked(); // "Ответить" page 1
     void on_pushButton_3_clicked(); // "Пропустить" page 1
 

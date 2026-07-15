@@ -32,30 +32,6 @@ void MainWindow::setBackgroundImage(const QString &path) // метод кото�
     updateBackground();
 }
 
-void MainWindow::updateBackground() // метод отвечающий за отрисовку заднего фона ( например картинки )
-{
-    if (m_originalPixmap.isNull())
-        return; // на случай если путь неверный
-
-    QPixmap pm = m_originalPixmap.scaled(ui->centralwidget->size(),
-                                          Qt::IgnoreAspectRatio,
-                                          Qt::SmoothTransformation);
-    QPainter painter(&pm);
-    painter.setCompositionMode(QPainter::CompositionMode_SourceOver);
-    painter.fillRect(pm.rect(), QColor(0, 0, 0, 150));
-    painter.end();
-
-    QPalette palette;
-    palette.setBrush(QPalette::Window, QBrush(pm));
-    ui->centralwidget->setPalette(palette);
-    ui->centralwidget->setAutoFillBackground(true);
-}
-
-void MainWindow::resizeEvent(QResizeEvent *event) // метод отвечаюзий за растягивание заднего фона
-{
-    QMainWindow::resizeEvent(event); // обязательно вызвать родительский
-    updateBackground();
-}
 void MainWindow::setupSideBar() // метод, который заполняет сайдБар интерактивными кнопками
 {
     QStringList items = {"Главная", "Настройки", "Профиль", "Выход", "кнопка еще " };

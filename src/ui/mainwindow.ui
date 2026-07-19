@@ -86,7 +86,7 @@
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="page">
              <layout class="QGridLayout" name="gridLayout_3">
@@ -139,8 +139,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>302</width>
-                   <height>1058</height>
+                   <width>956</width>
+                   <height>818</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_4">
@@ -233,6 +233,14 @@ QRadioButton::indicator:checked {
     border-radius: 8px;
     background-color: rgb(255, 179, 57);
     border: 2px solid rgb(190, 127, 0);
+}
+QRadioButton[resultState=&quot;correct&quot;] {
+    border: 2px solid rgb(80, 200, 120);
+    background-color: rgb(20, 40, 28);
+}
+QRadioButton[resultState=&quot;wrong&quot;] {
+    border: 2px solid rgb(220, 80, 80);
+    background-color: rgb(40, 20, 20);
 }</string>
                        </property>
                        <property name="text">
@@ -296,6 +304,14 @@ QRadioButton::indicator:checked {
     border-radius: 8px;
     background-color: rgb(255, 179, 57);
     border: 2px solid rgb(190, 127, 0);
+}
+QRadioButton[resultState=&quot;correct&quot;] {
+    border: 2px solid rgb(80, 200, 120);
+    background-color: rgb(20, 40, 28);
+}
+QRadioButton[resultState=&quot;wrong&quot;] {
+    border: 2px solid rgb(220, 80, 80);
+    background-color: rgb(40, 20, 20);
 }</string>
                        </property>
                        <property name="text">
@@ -359,6 +375,14 @@ QRadioButton::indicator:checked {
     border-radius: 8px;
     background-color: rgb(255, 179, 57);
     border: 2px solid rgb(190, 127, 0);
+}
+QRadioButton[resultState=&quot;correct&quot;] {
+    border: 2px solid rgb(80, 200, 120);
+    background-color: rgb(20, 40, 28);
+}
+QRadioButton[resultState=&quot;wrong&quot;] {
+    border: 2px solid rgb(220, 80, 80);
+    background-color: rgb(40, 20, 20);
 }</string>
                        </property>
                        <property name="text">
@@ -422,6 +446,14 @@ QRadioButton::indicator:checked {
     border-radius: 8px;
     background-color: rgb(255, 179, 57);
     border: 2px solid rgb(190, 127, 0);
+}
+QRadioButton[resultState=&quot;correct&quot;] {
+    border: 2px solid rgb(80, 200, 120);
+    background-color: rgb(20, 40, 28);
+}
+QRadioButton[resultState=&quot;wrong&quot;] {
+    border: 2px solid rgb(220, 80, 80);
+    background-color: rgb(40, 20, 20);
 }</string>
                        </property>
                        <property name="text">
@@ -833,8 +865,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>302</width>
-                   <height>810</height>
+                   <width>958</width>
+                   <height>701</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">

@@ -2,7 +2,8 @@
 #include <qmainwindow.h>
 #include <qtconfigmacros.h>
 #include <qtmetamacros.h>
-
+#include "pagenavigator.hpp"
+#include "core/quizcontroller.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui{
@@ -19,18 +20,20 @@ public:
     void setBackgroundImage(const QString &path);
 
 protected:
-    void resizeEvent(QResizeEvent *event) override;
 
 private:
     void updateBackground();
     void goToPage(int index);
 
-    Ui::MainWindow *ui;
-    QPixmap m_originalPixmap;
+    QuizController *m_quiz = nullptr;
 
-private slots:
-    void setupSideBar(); // новый метод
-    
+    void showCurrentQuestion();
+
+    Ui::MainWindow *ui;
+    PageNavigator *m_navigator;
+    // QuizController *m_quiz;
+
+private slots:    
     void on_pushButton_1_clicked(); // "Назад" page 1
     void on_pushButton_2_clicked(); // "Ответить" page 1
     void on_pushButton_3_clicked(); // "Пропустить" page 1

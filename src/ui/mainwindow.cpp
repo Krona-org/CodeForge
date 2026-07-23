@@ -25,9 +25,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     CodeSize::fitCodeEditHeight(ui->codeTextEdit);
     new CppSyntaxHighlighter(ui->codeTextEdit->document());
     int a = 1, size = 10;
-    ui->questionEyebrowLabel->setText(QString::fromStdString(std::format("Попрос {0} из {1}", a, size)));
+    //ui->questionEyebrowLabel->setText(QString::fromStdString(std::format("Попрос {0} из {1}", a, size)));
 
-    buildQuestionNav(50);
+    buildQuestionNav(6);
 
     // отладка вывод в консоль
     m_navigator->getCount(); //  количество страниц
@@ -49,7 +49,7 @@ void MainWindow::buildQuestionNav(int questionCount)
 {
     QVBoxLayout* layout = ui->verticalLayout_8;
 
-    // чистим всё, что лежало в лэйауте (пример из Designer в т.ч.)
+    // чистим всё, что лежало в лэйауте
     QLayoutItem* item;
     while ((item = layout->takeAt(0)) != nullptr) {
         if (item->widget())
@@ -57,9 +57,26 @@ void MainWindow::buildQuestionNav(int questionCount)
         delete item;
     }
 
+    // Ваш стиль для кнопок
+    QString buttonStyle = 
+        "QPushButton {"
+        "    font-family: \"IBM Plex Mono\";"
+        "    font-weight: 500;"
+        "    background-color: rgb(17, 23, 24);"
+        "    color: rgb(199, 212, 210);"
+        "    border: 1px solid rgb(33, 48, 50);"
+        "    border-radius: 4px;"
+        "    padding: 8px 16px;"
+        "}"
+        "QPushButton:hover {"
+        "    background-color: rgb(22, 30, 32);"
+        "    border-color: rgb(51, 64, 63);"
+        "}";
+
     for (int i = 0; i < questionCount; ++i) {
         auto* btn = new QPushButton(QString("Вопрос %1").arg(i + 1), this);
-        btn->setMinimumHeight(20);
+        btn->setMinimumHeight(35); // Меняем на 35
+        btn->setStyleSheet(buttonStyle);
 
         connect(btn, &QPushButton::clicked, this, [this, i]() {
             m_navigator->goToPage(i);

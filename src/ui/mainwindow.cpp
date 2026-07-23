@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     int a = 1, size = 10;
     ui->questionEyebrowLabel->setText(QString::fromStdString(std::format("Попрос {0} из {1}", a, size)));
 
+    buildQuestionNav(50);
 
     // отладка вывод в консоль
     m_navigator->getCount(); //  количество страниц
@@ -44,3 +45,28 @@ void MainWindow::on_pushButton_7_clicked() { m_navigator->previous(); }
 void MainWindow::on_pushButton_8_clicked() { m_navigator->next(); }
 void MainWindow::on_pushButton_9_clicked() { m_navigator->next(); }
 
+void MainWindow::buildQuestionNav(int questionCount)
+{
+    QVBoxLayout* layout = ui->verticalLayout_8;
+
+    // чистим всё, что лежало в лэйауте (пример из Designer в т.ч.)
+    QLayoutItem* item;
+    while ((item = layout->takeAt(0)) != nullptr) {
+        if (item->widget())
+            item->widget()->deleteLater();
+        delete item;
+    }
+
+    for (int i = 0; i < questionCount; ++i) {
+        auto* btn = new QPushButton(QString("Вопрос %1").arg(i + 1), this);
+        btn->setMinimumHeight(20);
+
+        connect(btn, &QPushButton::clicked, this, [this, i]() {
+            m_navigator->goToPage(i);
+        });
+
+        layout->addWidget(btn, 0, Qt::AlignTop);
+    }
+
+    layout->addSpacerItem(new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding));
+}

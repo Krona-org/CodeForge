@@ -33,6 +33,8 @@ private:
     PageNavigator *m_navigator;
     // QuizController *m_quiz;
 
+    void buildQuestionNav(int questionCount);
+
 private slots:    
     void on_pushButton_1_clicked(); // "Назад" page 1
     void on_pushButton_2_clicked(); // "Ответить" page 1

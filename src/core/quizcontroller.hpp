@@ -1,7 +1,7 @@
 #pragma once
 
-#include "core/pagefactory.hpp"
-#include "core/question.hpp"
+#include "pagefactory.hpp"
+#include "question.hpp"
 
 #include <vector>
 
@@ -16,29 +16,7 @@ enum class QuestionLayout
 class QuizController
 {
 public:
-    explicit QuizController(PageFactory factory);
 
-    const Question &current() const;
-    QuestionLayout currentLayout() const;
-
-    int currentIndex() const { return m_index; }
-    int totalCount() const { return static_cast<int>(m_questions.size()); }
-
-    bool hasNext() const;
-    bool hasPrevious() const;
-
-    void next();
-    void previous();
-    void skip();
-
-    // Выбор ответа пользователем для текущего вопроса
-    void selectSingle(int optionIndex);   // radio button
-    void toggleMulti(int optionIndex);    // checkbox
-    void clearSelection();
-
-    const std::vector<int> &selectedOptions() const { return m_selected; }
-    bool isAnswered() const { return !m_selected.empty(); }
-    bool isCorrect() const;
 
 private:
     void loadQuestions();

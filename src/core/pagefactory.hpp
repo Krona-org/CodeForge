@@ -21,14 +21,12 @@ public:
     Page createPage(int index) const;
     size_t totalPages() const;
 
-    // Метод для динамического добавления вопросов (например, при парсинге JSON)
     void addQuestionToPage(int pageIndex, const Question& question);
 
 private:
     // Храним страницы в map, где ключ — индекс страницы
     std::map<int, std::vector<Question>> m_pagesData;
 
-    // Внутренний метод для хардкода начальных вопросов (если базы данных пока нет)
     void loadDefaultMockData();
 };
 

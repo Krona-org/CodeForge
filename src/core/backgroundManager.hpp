@@ -1,3 +1,4 @@
+// сейчас не используется
 #pragma once
 
 #include <QWidget>
@@ -26,7 +27,7 @@ inline void BackgroundManager::setImage(const QString &path)
 inline void BackgroundManager::update()
 {
     if (m_originalPixmap.isNull())
-        return; // на случай если путь неверный
+        return; 
 
     QPixmap pm = m_originalPixmap.scaled(m_target->size(),
                                             Qt::IgnoreAspectRatio,

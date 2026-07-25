@@ -2,47 +2,62 @@
 #pragma once
 
 #include <QString>
-#include <vector>
+#include <QVector>
+#include <atomic>
 
-struct Option
+struct AnswerOption 
 {
     QString text;
     bool isCorrect = false;
 };
-
-class Question
+class Question 
 {
 public:
-    Question() : id(generateId()) {};
-    Question(QString title, std::vector<Option> answers, QString explanation = "", 
-             QString eyebrow = "", QString codeSnippet = "", QString codeFileName = "");
-    // Геттеры для UI
-    int getId() const { return id; }
-    QString getTitle() const { return title; }
-    QString getEyebrow() const { return eyebrow; }
-    QString getCodeSnippet() const { return codeSnippet; }
-    QString getExplanation() const { return explanation; }
-    std::vector<Option> getAnswers() const { return answers; }
+    Question() : globalId(countGlobalId()) {};
+    virtual ~Question() {};
+    int getGlobalId() const { return this->globalId; }
 
 private:
-    int id;
-    int generateId();
-    QString eyebrow;      // "// ВОПРОС 1 ИЗ 3"
-    QString title;
-    QString codeFileName;
-    QString codeSnippet;
-    QString explanation;  // текст объяснения, показывается после ответа
+    int countGlobalId();
 
-    std::vector<Option> answers; 
+private:
+    int globalId;
+    QString browTitle;
+    QString bodyTitle;
+    QString browCode;
+    QString bodyCode;
+    QString browSolution;
+    QString bodySolution;
+    QVector<AnswerOption> answer;
 };
 
-inline Question::Question(QString title, std::vector<Option> answers, QString explanation, 
-                   QString eyebrow, QString codeSnippet, QString codeFileName)
-    : id(generateId()), eyebrow(eyebrow), title(title), 
-      codeFileName(codeFileName), codeSnippet(codeSnippet), 
-      explanation(explanation), answers(answers) {};
+template<typename Derived>
+class CountedQuestion : public Question
+{
+public:
+    CountedQuestion() : privateId(countPrivateId()) {};
+    int getPrivateId() const { return privateId; }
+    
+private:
+    int countPrivateId();
+private:
+    int privateId;
+};
 
-inline int Question::generateId() {
-    static int temp = 0;
+class oneVarQuestion : public CountedQuestion<oneVarQuestion> {};
+class twoVarQuestion : public CountedQuestion<twoVarQuestion> {};
+class threeVarQuestion : public CountedQuestion<threeVarQuestion> {};
+
+
+inline int Question::countGlobalId() 
+{
+    static std::atomic<int> temp = 0;
+    return temp++;
+}
+
+template<typename Derived>
+inline int CountedQuestion<Derived>::countPrivateId() 
+{
+    static std::atomic<int> temp = 0;
     return temp++;
 }

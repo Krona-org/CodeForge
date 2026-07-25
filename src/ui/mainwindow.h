@@ -2,8 +2,11 @@
 #include <qmainwindow.h>
 #include <qtconfigmacros.h>
 #include <qtmetamacros.h>
+#include <vector>
 #include "pagenavigator.hpp"
 #include "core/quizcontroller.hpp"
+#include "pagefactory.hpp"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui{
@@ -28,10 +31,17 @@ private:
     QuizController *m_quiz = nullptr;
 
     void showCurrentQuestion();
+    void checkAnswer();          // считывает текущий выбор из UI, сохраняет его в QuizController и подсвечивает результат
+    void resetAnswerUI();        // сбрасывает подсветку/выбор перед показом нового вопроса
+    void applyAnswerResult(const std::vector<bool>& selections); // подсвечивает результат по заданному набору выбранных вариантов
+    void onAnswerButtonClicked(); // общая логика для кнопок "Ответить" на всех 3 страницах
 
     Ui::MainWindow *ui;
     PageNavigator *m_navigator;
     // QuizController *m_quiz;
+
+    PageFactory m_factory;
+    void initializeFullPage(); // хардкод всех вопросов (временно, пока нет реальных данных)
 
     void buildQuestionNav(int questionCount);
 

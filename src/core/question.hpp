@@ -10,13 +10,14 @@ struct AnswerOption
     QString text;
     bool isCorrect = false;
 };
+
 class Question 
 {
 public:
     Question() : globalId(countGlobalId()) {};
     virtual ~Question() {};
     int getGlobalId() const { return this->globalId; }
-
+    virtual int getPrivateId() const = 0;
 private:
     int countGlobalId();
 
@@ -39,7 +40,7 @@ public:
     int getPrivateId() const { return privateId; }
     
 private:
-    int countPrivateId();
+    int countPrivateId() ;
 private:
     int privateId;
 };
@@ -47,7 +48,6 @@ private:
 class oneVarQuestion : public CountedQuestion<oneVarQuestion> {};
 class twoVarQuestion : public CountedQuestion<twoVarQuestion> {};
 class threeVarQuestion : public CountedQuestion<threeVarQuestion> {};
-
 
 inline int Question::countGlobalId() 
 {
@@ -60,4 +60,9 @@ inline int CountedQuestion<Derived>::countPrivateId()
 {
     static std::atomic<int> temp = 0;
     return temp++;
+}
+
+namespace 
+{
+    QString sdfs;
 }

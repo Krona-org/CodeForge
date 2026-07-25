@@ -9,9 +9,6 @@ public:
     CodeSize() {};
     ~CodeSize() {};
     static void fitCodeEditHeight(QPlainTextEdit *edit);
-
-private:
-    
 };
 
 inline void CodeSize::fitCodeEditHeight(QPlainTextEdit *edit) {

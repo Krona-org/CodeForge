@@ -4,6 +4,7 @@
 #include <QString>
 #include <QVector>
 #include <atomic>
+#include <qcontainerfwd.h>
 
 struct AnswerOption 
 {
@@ -14,10 +15,12 @@ struct AnswerOption
 class Question 
 {
 public:
-    Question() : globalId(countGlobalId()) {};
-    virtual ~Question() {};
-    int getGlobalId() const { return this->globalId; }
+    Question(QString BodyTitle, QString BrowCode, QString BodyCode,
+                        QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer);
+    virtual ~Question() = default;
     virtual int getPrivateId() const = 0;
+    int getGlobalId() const { return this->globalId; }
+
 private:
     int countGlobalId();
 
@@ -36,7 +39,10 @@ template<typename Derived>
 class CountedQuestion : public Question
 {
 public:
-    CountedQuestion() : privateId(countPrivateId()) {};
+    CountedQuestion(QString BodyTitle, QString BrowCode, QString BodyCode,
+                     QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer)
+            :Question(BodyTitle,  BrowCode,  BodyCode,  BrowSolution,  BodySolution, Answer),
+                       privateId(countPrivateId()) {}
     int getPrivateId() const { return privateId; }
     
 private:
@@ -45,9 +51,30 @@ private:
     int privateId;
 };
 
-class oneVarQuestion : public CountedQuestion<oneVarQuestion> {};
-class twoVarQuestion : public CountedQuestion<twoVarQuestion> {};
-class threeVarQuestion : public CountedQuestion<threeVarQuestion> {};
+class oneVarQuestion : public CountedQuestion<oneVarQuestion> {
+public:
+    using CountedQuestion<oneVarQuestion>::CountedQuestion; // наследую конструктор базового класса
+};
+class twoVarQuestion : public CountedQuestion<twoVarQuestion> {
+public:
+    using CountedQuestion<twoVarQuestion>::CountedQuestion;
+};
+class threeVarQuestion : public CountedQuestion<threeVarQuestion> {
+public:
+    using CountedQuestion<threeVarQuestion>::CountedQuestion;
+};
+
+inline Question::Question(QString BodyTitle, QString BrowCode, QString BodyCode,
+                        QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer)
+{
+    globalId = countGlobalId();
+    this->bodyTitle = BodyTitle;
+    this->browCode = BrowCode;
+    this->bodyCode = BodyCode;
+    this->browSolution = BrowSolution;
+    this->bodySolution = BodySolution;
+    this->answer = Answer;
+}
 
 inline int Question::countGlobalId() 
 {
@@ -60,9 +87,4 @@ inline int CountedQuestion<Derived>::countPrivateId()
 {
     static std::atomic<int> temp = 0;
     return temp++;
-}
-
-namespace 
-{
-    QString sdfs;
 }

@@ -86,7 +86,7 @@
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page">
              <layout class="QGridLayout" name="gridLayout_3">
@@ -139,8 +139,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>956</width>
-                   <height>820</height>
+                   <width>950</width>
+                   <height>825</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_4">
@@ -623,6 +623,12 @@ int main(int, char**)
                      </size>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_7">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
                      <item row="0" column="0">
                       <widget class="QPushButton" name="pushButton_1">
                        <property name="styleSheet">
@@ -631,7 +637,7 @@ int main(int, char**)
     font-weight: 500;
     background-color: rgb(17, 23, 24);
     color: rgb(199, 212, 210);
-    border: 1px solid rgb(33, 48, 50);
+    border: 2px solid rgb(33, 48, 50);
     border-radius: 4px;
 	padding: 8px 16px;
 }
@@ -655,7 +661,7 @@ QPushButton:hover {
     font-weight: 500;
     background-color: rgb(17, 23, 24);
     color: rgb(199, 212, 210);
-    border: 1px solid rgb(33, 48, 50);
+    border: 2px solid rgb(33, 48, 50);
     border-radius: 4px;
 	padding: 8px 16px;
 }
@@ -915,8 +921,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>958</width>
-                   <height>684</height>
+                   <width>952</width>
+                   <height>672</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
@@ -1287,7 +1293,22 @@ QRadioButton::indicator:checked {
                       <height>16777215</height>
                      </size>
                     </property>
-                    <layout class="QGridLayout" name="gridLayout_8">
+                    <layout class="QGridLayout" name="gridLayout_8" rowstretch="0">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>9</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>9</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>9</number>
+                     </property>
+                     <property name="spacing">
+                      <number>6</number>
+                     </property>
                      <item row="0" column="0">
                       <widget class="QPushButton" name="pushButton_4">
                        <property name="styleSheet">
@@ -1296,7 +1317,7 @@ QRadioButton::indicator:checked {
     font-weight: 500;
     background-color: rgb(17, 23, 24);
     color: rgb(199, 212, 210);
-    border: 1px solid rgb(33, 48, 50);
+    border: 2px solid rgb(33, 48, 50);
     border-radius: 4px;
 	padding: 8px 16px;
 }
@@ -1309,30 +1330,6 @@ QPushButton:hover {
                        </property>
                        <property name="text">
                         <string>Назад</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="2">
-                      <widget class="QPushButton" name="pushButton_6">
-                       <property name="styleSheet">
-                        <string notr="true">QPushButton {
-	font-family: &quot;IBM Plex Mono&quot;;
-    font-weight: 500;
-    background-color: rgb(17, 23, 24);
-    color: rgb(199, 212, 210);
-    border: 1px solid rgb(33, 48, 50);
-    border-radius: 4px;
-	padding: 8px 16px;
-}
-
-QPushButton:hover {
-    background-color: rgb(22, 30, 32);
-    border-color: rgb(51, 64, 63);
-}
-</string>
-                       </property>
-                       <property name="text">
-                        <string>Пропустить</string>
                        </property>
                       </widget>
                      </item>
@@ -1356,6 +1353,30 @@ QPushButton:hover {
                        </property>
                        <property name="text">
                         <string>Ответить</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QPushButton" name="pushButton_6">
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton {
+	font-family: &quot;IBM Plex Mono&quot;;
+    font-weight: 500;
+    background-color: rgb(17, 23, 24);
+    color: rgb(199, 212, 210);
+    border: 2px solid rgb(33, 48, 50);
+    border-radius: 4px;
+	padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: rgb(22, 30, 32);
+    border-color: rgb(51, 64, 63);
+}
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Пропустить</string>
                        </property>
                       </widget>
                      </item>
@@ -1516,8 +1537,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>958</width>
-                   <height>684</height>
+                   <width>952</width>
+                   <height>672</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_10">
@@ -1533,6 +1554,12 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                      </size>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_11">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>9</number>
+                     </property>
                      <item row="0" column="0">
                       <widget class="QPushButton" name="pushButton_7">
                        <property name="sizePolicy">
@@ -1547,7 +1574,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
     font-weight: 500;
     background-color: rgb(17, 23, 24);
     color: rgb(199, 212, 210);
-    border: 1px solid rgb(33, 48, 50);
+    border: 2px solid rgb(33, 48, 50);
     border-radius: 4px;
 	padding: 8px 16px;
 }
@@ -1641,7 +1668,7 @@ QPushButton:hover {
     font-weight: 500;
     background-color: rgb(17, 23, 24);
     color: rgb(199, 212, 210);
-    border: 1px solid rgb(33, 48, 50);
+    border: 2px solid rgb(33, 48, 50);
     border-radius: 4px;
 	padding: 8px 16px;
 }
@@ -2349,7 +2376,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <x>0</x>
                   <y>0</y>
                   <width>200</width>
-                  <height>578</height>
+                  <height>566</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2545,7 +2572,7 @@ QProgressBar::chunk {
      <x>0</x>
      <y>0</y>
      <width>1170</width>
-     <height>30</height>
+     <height>33</height>
     </rect>
    </property>
   </widget>

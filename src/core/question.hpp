@@ -98,7 +98,6 @@ inline QString Question::getBrowSolution() { return browSolution; }
 inline QString Question::getBodySolution() { return bodySolution; }
 inline const QVector<AnswerOption>& Question::getAnswer() const { return answer; } 
 
-
 template<typename Derived>
 inline int CountedQuestion<Derived>::countPrivateId() 
 {

@@ -5,7 +5,8 @@
 
 inline void MainWindow::initializeFullPage()
 {
-    m_fabricQuest.push_back(0, "Что произойдёт со следующим кодом (C++17)?",
+    m_fabricQuest.push_back(0, 
+        "Что произойдёт со следующим кодом (C++17)?",
         "Question #1",
         "#include <iostream>\n\nclass MyClass\n{\npublic:\n    MyClass() :\n        value(1)\n    {\n        value = 2;\n    }\n\npublic:\n    int value = 3;\n};\n\nint main(int, char**)\n{\n    MyClass myObject;\n    std::cout << myObject.value << std::endl;\n    return 0;\n}",
         "Правильный ответ",

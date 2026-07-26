@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1170</width>
-    <height>776</height>
+    <height>806</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -86,9 +86,9 @@
           <item>
            <widget class="QStackedWidget" name="stackedWidget">
             <property name="currentIndex">
-             <number>1</number>
+             <number>0</number>
             </property>
-            <widget class="QWidget" name="page">
+            <widget class="QWidget" name="page_1">
              <layout class="QGridLayout" name="gridLayout_3">
               <property name="leftMargin">
                <number>0</number>
@@ -139,8 +139,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>950</width>
-                   <height>825</height>
+                   <width>956</width>
+                   <height>816</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_4">
@@ -148,7 +148,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                    <number>20</number>
                   </property>
                   <item row="2" column="0">
-                   <widget class="QWidget" name="optionsWidget" native="true">
+                   <widget class="QWidget" name="answerWidget_page1" native="true">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -178,7 +178,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QRadioButton" name="optionRadio1">
+                      <widget class="QRadioButton" name="answerButton1_page1">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -249,7 +249,7 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="optionRadio2">
+                      <widget class="QRadioButton" name="answerButton2_page1">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -320,7 +320,7 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="optionRadio3">
+                      <widget class="QRadioButton" name="answerButton3_page1">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -391,7 +391,7 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="optionRadio4">
+                      <widget class="QRadioButton" name="answerButton4_page1">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -465,7 +465,7 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QFrame" name="codePanel">
+                   <widget class="QFrame" name="codeWidget_page1">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -502,7 +502,7 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="codeFileNameLabel">
+                      <widget class="QLabel" name="browCode_page1">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                          <horstretch>0</horstretch>
@@ -542,7 +542,7 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                       </widget>
                      </item>
                      <item>
-                      <widget class="CodePlainTextEdit" name="codeTextEdit">
+                      <widget class="CodePlainTextEdit" name="bodyCode_page1">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                          <horstretch>0</horstretch>
@@ -717,7 +717,7 @@ QPushButton:hover {
                    </widget>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QWidget" name="widget_4" native="true">
+                   <widget class="QWidget" name="tittleWidget_page1" native="true">
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
@@ -726,7 +726,7 @@ QPushButton:hover {
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout">
                      <item>
-                      <widget class="QLabel" name="questionEyebrowLabel">
+                      <widget class="QLabel" name="browTitle_page1">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -757,7 +757,7 @@ QPushButton:hover {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="questionTitleLabel">
+                      <widget class="QLabel" name="bodyTitle_page1">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -794,7 +794,7 @@ QPushButton:hover {
                    </widget>
                   </item>
                   <item row="4" column="0">
-                   <widget class="QWidget" name="widget_12" native="true">
+                   <widget class="QWidget" name="solutionWidget_page1" native="true">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -809,7 +809,7 @@ QPushButton:hover {
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_7">
                      <item>
-                      <widget class="QLabel" name="questionEyebrowLabel_6">
+                      <widget class="QLabel" name="browSolution_page1">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                          <horstretch>0</horstretch>
@@ -834,7 +834,7 @@ QPushButton:hover {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="questionTitleLabel_7">
+                      <widget class="QLabel" name="bodySolution_page1">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -921,8 +921,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>952</width>
-                   <height>672</height>
+                   <width>958</width>
+                   <height>684</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
@@ -1537,8 +1537,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>952</width>
-                   <height>672</height>
+                   <width>958</width>
+                   <height>684</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_10">
@@ -2376,7 +2376,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <x>0</x>
                   <y>0</y>
                   <width>200</width>
-                  <height>566</height>
+                  <height>608</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -2572,7 +2572,7 @@ QProgressBar::chunk {
      <x>0</x>
      <y>0</y>
      <width>1170</width>
-     <height>33</height>
+     <height>30</height>
     </rect>
    </property>
   </widget>

@@ -31,7 +31,10 @@ public:
     { 
         return mapQuest.at(indexPage).at(num)->getPrivateId();
     }
-
+    QString getBodySolution(int indexPage, int num) const
+    {
+        return mapQuest.at(indexPage).at(num)->getBodySolution();
+    }
 private:
     template<typename T>
     void registerType(int indexPage)

@@ -4,7 +4,10 @@
 #include <QString>
 #include <QVector>
 #include <atomic>
+#include <iterator>
 #include <qcontainerfwd.h>
+#include <stdexcept>
+#include <type_traits>
 
 struct AnswerOption 
 {
@@ -19,7 +22,14 @@ public:
                 QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer);
     virtual ~Question() = default;
     virtual int getPrivateId() const = 0;
-    int getGlobalId() const { return this->globalId; }
+    int getGlobalId();
+    QString getBrowTitle();
+    QString getBodyTitle();
+    QString getBrowCode();
+    QString getBodyCode();
+    QString getBrowSolution();
+    QString getBodySolution();
+    const QVector<AnswerOption>& getAnswer() const;
 
 private:
     int countGlobalId();
@@ -82,9 +92,20 @@ inline int Question::countGlobalId()
     return temp++;
 }
 
+inline int Question::getGlobalId()         { return globalId; }
+inline QString Question::getBrowTitle()    { return browTitle; }
+inline QString Question::getBodyTitle()    { return bodyTitle; }
+inline QString Question::getBrowCode()     { return browCode; }
+inline QString Question::getBodyCode()     { return bodyCode; }
+inline QString Question::getBrowSolution() { return browSolution; }
+inline QString Question::getBodySolution() { return bodySolution; }
+inline const QVector<AnswerOption>& Question::getAnswer() const { return answer; } 
+
+
 template<typename Derived>
 inline int CountedQuestion<Derived>::countPrivateId() 
 {
     static std::atomic<int> temp = 0;
     return temp++;
 }
+

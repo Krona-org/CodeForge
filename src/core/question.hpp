@@ -16,7 +16,7 @@ class Question
 {
 public:
     Question(QString BodyTitle, QString BrowCode, QString BodyCode,
-                        QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer);
+                QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer);
     virtual ~Question() = default;
     virtual int getPrivateId() const = 0;
     int getGlobalId() const { return this->globalId; }
@@ -41,9 +41,9 @@ class CountedQuestion : public Question
 public:
     CountedQuestion(QString BodyTitle, QString BrowCode, QString BodyCode,
                      QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer)
-            :Question(BodyTitle,  BrowCode,  BodyCode,  BrowSolution,  BodySolution, Answer),
+            :Question(BodyTitle,  BrowCode,  BodyCode, BrowSolution,  BodySolution, Answer),
                        privateId(countPrivateId()) {}
-    int getPrivateId() const { return privateId; }
+    int getPrivateId() const override { return privateId; }
     
 private:
     int countPrivateId() ;
@@ -65,7 +65,7 @@ public:
 };
 
 inline Question::Question(QString BodyTitle, QString BrowCode, QString BodyCode,
-                        QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer)
+                            QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer)
 {
     globalId = countGlobalId();
     this->bodyTitle = BodyTitle;

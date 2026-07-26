@@ -4,10 +4,7 @@
 #include <QString>
 #include <QVector>
 #include <atomic>
-#include <iterator>
 #include <qcontainerfwd.h>
-#include <stdexcept>
-#include <type_traits>
 
 struct AnswerOption 
 {

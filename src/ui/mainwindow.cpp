@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     m_navigator = new PageNavigator(ui->stackedWidget);
 
     initializeFullPage();          // хардкодим вопросы в m_factory
-    ui->bodySolution_page1->setText(m_fabricQuest.getBodySolution(0, 0));
+    ui->bodySolution_page1->setText(m_fabricQuest.getQuestion(0, 0)->getBodySolution());
 }
 
 MainWindow::~MainWindow() { delete ui;} 

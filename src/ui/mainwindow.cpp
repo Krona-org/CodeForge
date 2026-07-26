@@ -1,9 +1,7 @@
 #include <qmainwindow.h>
-#include <qnamespace.h>
 #include <qobject.h>
 #include <qpixmap.h>
 #include <qpainter.h>
-#include <format>
 #include <QWidget>
 #include <QLabel>
 #include <QPushButton>
@@ -15,11 +13,7 @@
 #include <qscrollbar.h>
 
 #include "ui_mainwindow.h"
-#include "codesize.hpp"
 #include "mainwindow.h"
-#include "cppsyntaxhighlighter.hpp"
-#include "stypehelper.hpp"
-#include "question.hpp"
 
 #include "questTest.hpp"
 
@@ -30,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     m_navigator = new PageNavigator(ui->stackedWidget);
 
     initializeFullPage();          // хардкодим вопросы в m_factory
-
+    ui->bodySolution_page1->setText(m_fabricQuest.getBodySolution(0, 0));
 }
 
 MainWindow::~MainWindow() { delete ui;} 

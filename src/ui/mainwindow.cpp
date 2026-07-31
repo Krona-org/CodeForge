@@ -1,15 +1,12 @@
 #include <QMainWindow>
 #include <QWidget>
-#include <string>
 
-#include "fabricQuest.hpp"
-#include "pageFiller.hpp"
 #include "ui_mainwindow.h"
 #include "mainwindow.h"
 #include "questTest.hpp"
 
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow), count(0)
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     m_pageFiiler = new PageFiller(ui);

@@ -31,10 +31,7 @@ private:
     PageNavigator *m_navigator;
     FabricQuest* m_fabricQuest;
     PageFiller* m_pageFiiler;
-    int count;
     void initializeFullPage(); // хардкод всех вопросов (временно, пока нет реальных данных)
-
-    void buildQuestionNav(int questionCount);
 
 private slots:    
     void on_backButton_page1_clicked(); // "назад" page 1

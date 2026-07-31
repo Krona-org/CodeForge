@@ -12,14 +12,14 @@ class PageFiller
 {
 public:
     PageFiller(Ui::MainWindow* ui) : ui(ui) {
-        highlighter_page1 = new CppSyntaxHighlighter(ui->bodyCode_page1->document());
+        highlighter_page1 = std::make_shared<CppSyntaxHighlighter>(ui->bodyCode_page1->document());
     };
     void fillPage_1(std::shared_ptr<Question> Quest, const int& current, const int& total);
     void fillPage_2(std::shared_ptr<Question> Quest);
     void fillPage_3(std::shared_ptr<Question> Quest);
 private:
-    Ui::MainWindow *ui;
-    CppSyntaxHighlighter *highlighter_page1 = nullptr;
+    Ui::MainWindow* ui;
+    std::shared_ptr<CppSyntaxHighlighter> highlighter_page1 = nullptr;
 
 };
 inline void PageFiller::fillPage_1(std::shared_ptr<Question> Quest, const int& current, const int& total)

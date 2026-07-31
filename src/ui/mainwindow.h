@@ -27,10 +27,10 @@ private:
     void updateBackground();
     void goToPage(int index);
 
-    Ui::MainWindow *ui;
-    PageNavigator *m_navigator;
-    FabricQuest* m_fabricQuest;
-    PageFiller* m_pageFiiler;
+    Ui::MainWindow* ui;
+    std::shared_ptr<PageNavigator> m_navigator;
+    std::shared_ptr<FabricQuest> m_fabricQuest;
+    std::shared_ptr<PageFiller> m_pageFiiler;
     void initializeFullPage(); // хардкод всех вопросов (временно, пока нет реальных данных)
 
 private slots:    

@@ -2,6 +2,7 @@
 #pragma once
 
 #include <QStackedWidget>
+#include <memory>
 #include <qdebug.h>
 #include "pageFiller.hpp"
 #include "fabricQuest.hpp"
@@ -12,7 +13,7 @@
 class PageNavigator
 {
 public:
-    explicit PageNavigator(QStackedWidget *stack, FabricQuest* m_fabQuest, PageFiller* m_pageFiller , int totalPage)
+    explicit PageNavigator(QStackedWidget* stack, std::shared_ptr<FabricQuest> m_fabQuest, std::shared_ptr<PageFiller> m_pageFiller , int totalPage)
                          : m_stack(stack), m_fabricQuest(m_fabQuest), m_pageFill(m_pageFiller), totalPage(totalPage), currentPage(0) 
     {
         
@@ -48,9 +49,9 @@ public:
     }
 
 private:
-    QStackedWidget *m_stack;
-    FabricQuest* m_fabricQuest;
-    PageFiller* m_pageFill;
+    QStackedWidget* m_stack;
+    std::shared_ptr<FabricQuest> m_fabricQuest;
+    std::shared_ptr<PageFiller> m_pageFill;
     int currentPage;
     int totalPage;
 };

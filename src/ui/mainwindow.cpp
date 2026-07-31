@@ -13,8 +13,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     m_fabricQuest = new FabricQuest();
     initializeFullPage();          // хардкодим вопросы в m_factory
     m_navigator = new PageNavigator(ui->stackedWidget, m_fabricQuest, m_pageFiiler, m_fabricQuest->totalPage());
-    m_pageFiiler->fillPage_1(m_fabricQuest->getQuestion(0, 1));
-    //ui->bodySolution_page1->setText(QString::number(m_fabricQuest->totalPage()));
 }
 
 MainWindow::~MainWindow() { delete ui;} 

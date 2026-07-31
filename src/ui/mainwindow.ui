@@ -717,7 +717,7 @@ QPushButton:hover {
                    </widget>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QWidget" name="tittleWidget_page1" native="true">
+                   <widget class="QWidget" name="titleWidget_page1" native="true">
                     <property name="maximumSize">
                      <size>
                       <width>16777215</width>
@@ -930,7 +930,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                    <number>20</number>
                   </property>
                   <item row="0" column="0">
-                   <widget class="QWidget" name="widget_5" native="true">
+                   <widget class="QWidget" name="titleWidget_page2" native="true">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -945,7 +945,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_3">
                      <item>
-                      <widget class="QLabel" name="questionEyebrowLabel_2">
+                      <widget class="QLabel" name="browTitle_page2">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -970,7 +970,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="questionTitleLabel_3">
+                      <widget class="QLabel" name="bodyTitle_page2">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1001,7 +1001,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QWidget" name="optionsWidget_2" native="true">
+                   <widget class="QWidget" name="answerWidget_page2" native="true">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -1031,7 +1031,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QRadioButton" name="optionRadio1_2">
+                      <widget class="QRadioButton" name="answerButton1_page2">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -1094,7 +1094,7 @@ QRadioButton::indicator:checked {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="optionRadio2_2">
+                      <widget class="QRadioButton" name="answerButton2_page2">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -1157,7 +1157,7 @@ QRadioButton::indicator:checked {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="optionRadio3_2">
+                      <widget class="QRadioButton" name="answerButton3_page2">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -1220,7 +1220,7 @@ QRadioButton::indicator:checked {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QRadioButton" name="optionRadio4_2">
+                      <widget class="QRadioButton" name="answerButton4_page2">
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -1286,7 +1286,7 @@ QRadioButton::indicator:checked {
                    </widget>
                   </item>
                   <item row="2" column="0">
-                   <widget class="QWidget" name="widget_7" native="true">
+                   <widget class="QWidget" name="navigationWidget_page2" native="true">
                     <property name="maximumSize">
                      <size>
                       <width>800</width>
@@ -1410,7 +1410,7 @@ QPushButton:hover {
                    </spacer>
                   </item>
                   <item row="4" column="0">
-                   <widget class="QWidget" name="widget_11" native="true">
+                   <widget class="QWidget" name="solutionWidget_page2" native="true">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -1425,7 +1425,7 @@ QPushButton:hover {
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_6">
                      <item>
-                      <widget class="QLabel" name="questionEyebrowLabel_5">
+                      <widget class="QLabel" name="browSolution_page2">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                          <horstretch>0</horstretch>
@@ -1450,7 +1450,7 @@ QPushButton:hover {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="questionTitleLabel_6">
+                      <widget class="QLabel" name="bodySolution_page2">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1546,7 +1546,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                    <number>20</number>
                   </property>
                   <item row="2" column="0">
-                   <widget class="QWidget" name="widget_9" native="true">
+                   <widget class="QWidget" name="nawigationWidget_page3" native="true">
                     <property name="maximumSize">
                      <size>
                       <width>800</width>
@@ -1688,7 +1688,7 @@ QPushButton:hover {
                    </widget>
                   </item>
                   <item row="1" column="0">
-                   <widget class="QWidget" name="optionsWidget_3" native="true">
+                   <widget class="QWidget" name="answerWidger_page3" native="true">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -2071,7 +2071,7 @@ QCheckBox::indicator:checked {
                    </widget>
                   </item>
                   <item row="0" column="0">
-                   <widget class="QWidget" name="widget_8" native="true">
+                   <widget class="QWidget" name="titleWidget_page3" native="true">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                       <horstretch>0</horstretch>
@@ -2086,7 +2086,7 @@ QCheckBox::indicator:checked {
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_4">
                      <item>
-                      <widget class="QLabel" name="questionEyebrowLabel_3">
+                      <widget class="QLabel" name="browTitle_page3">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2111,7 +2111,7 @@ QCheckBox::indicator:checked {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="questionTitleLabel_4">
+                      <widget class="QLabel" name="bodyTitle_page3">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -2155,7 +2155,7 @@ QCheckBox::indicator:checked {
                    </spacer>
                   </item>
                   <item row="4" column="0">
-                   <widget class="QWidget" name="widget_10" native="true">
+                   <widget class="QWidget" name="solutionWidget_page3" native="true">
                     <property name="sizePolicy">
                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                       <horstretch>0</horstretch>
@@ -2170,7 +2170,7 @@ QCheckBox::indicator:checked {
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_5">
                      <item>
-                      <widget class="QLabel" name="questionEyebrowLabel_4">
+                      <widget class="QLabel" name="browSolution_page3">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                          <horstretch>0</horstretch>
@@ -2195,7 +2195,7 @@ QCheckBox::indicator:checked {
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="questionTitleLabel_5">
+                      <widget class="QLabel" name="bodySolution_page3">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                          <horstretch>0</horstretch>

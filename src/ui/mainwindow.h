@@ -5,6 +5,7 @@
 
 #include "pagenavigator.hpp"
 #include "fabricQuest.hpp"
+#include "pageFiller.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui{
@@ -28,22 +29,24 @@ private:
 
     Ui::MainWindow *ui;
     PageNavigator *m_navigator;
-    FabricQuest m_fabricQuest;
-
+    FabricQuest* m_fabricQuest;
+    PageFiller* m_pageFiiler;
+    int count;
     void initializeFullPage(); // хардкод всех вопросов (временно, пока нет реальных данных)
 
     void buildQuestionNav(int questionCount);
 
 private slots:    
-    void on_pushButton_1_clicked(); // "Назад" page 1
-    void on_pushButton_2_clicked(); // "Ответить" page 1
-    void on_pushButton_3_clicked(); // "Пропустить" page 1
+    void on_backButton_page1_clicked(); // "назад" page 1
+    void on_nextButton_page1_clicked(); // "ответить" page 1
+    void on_skipButton_page1_clicked(); // "Пропустить" page 1
 
-    void on_pushButton_4_clicked(); // "Назад" page 2
-    void on_pushButton_5_clicked(); // "Ответить" page 2
-    void on_pushButton_6_clicked(); // "Пропустить" page 2
+    void on_backButton_page2_clicked(); //
+    void on_nextButton_page2_clicked(); //
+    void on_skipButton_page2_clicked(); //
 
-    void on_pushButton_7_clicked(); // "Назад" page 3
-    void on_pushButton_8_clicked(); // "Ответить" page 3
-    void on_pushButton_9_clicked(); // "Пропустить" page 3
+    void on_backButton_page3_clicked(); //
+    void on_nextButton_page3_clicked(); //
+    void on_skipButton_page3_clicked(); //
+
 };

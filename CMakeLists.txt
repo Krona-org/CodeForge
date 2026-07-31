@@ -34,6 +34,7 @@ target_include_directories(math_guide PRIVATE
     ${CMAKE_CURRENT_BINARY_DIR}/math_guide_autogen/include
     ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${CMAKE_SOURCE_DIR}/src/core
+    ${CMAKE_SOURCE_DIR}/src/core/QuestLogic
     ${CMAKE_SOURCE_DIR}/src/widget
     ${CMAKE_SOURCE_DIR}/src/ui
     ${CMAKE_SOURCE_DIR}/src/style

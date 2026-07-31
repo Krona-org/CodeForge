@@ -17,6 +17,7 @@ public:
     {
         
         m_stack->setCurrentIndex(currentPage);
+        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, currentPage), currentPage + 1, totalPage);
     }
 
     void goToPage(int index)

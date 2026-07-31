@@ -529,10 +529,10 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">QLabel#codeFileNameLabel {
+                        <string notr="true">QLabel#browCode_page1 {
     color: rgb(94, 117, 118);
-    border: none;
-    border-bottom: 1px solid rgb(33, 48, 50);
+    border-radius: 5px;
+    border: 1px solid rgb(33, 48, 50);
     padding-left: 14px;
 }</string>
                        </property>
@@ -549,6 +549,12 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>0</height>
+                        </size>
+                       </property>
                        <property name="maximumSize">
                         <size>
                          <width>800</width>
@@ -562,10 +568,11 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">QPlainTextEdit#codeTextEdit {
+                        <string notr="true">QPlainTextEdit#bodyCode_page1 {
     background-color: rgb(10, 13, 14);
     color: rgb(199, 212, 210);
-    border: none;
+    border-radius: 10px;
+    border: 1px solid rgb(33, 48, 50);
     padding: 14px;
 }</string>
                        </property>
@@ -746,7 +753,7 @@ QPushButton:hover {
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">QLabel#questionEyebrowLabel {
+                        <string notr="true">QLabel#browTitle_page1 {
     color: rgb(255, 178, 56);
     border: none;
 }</string>
@@ -777,7 +784,7 @@ QPushButton:hover {
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">QLabel#questionTitleLabel {
+                        <string notr="true">QLabel#bodyTitle_page1 {
     color: rgb(242, 248, 246);
     border: none;
 }</string>
@@ -921,8 +928,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>958</width>
-                   <height>714</height>
+                   <width>325</width>
+                   <height>748</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
@@ -1537,8 +1544,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>958</width>
-                   <height>714</height>
+                   <width>383</width>
+                   <height>773</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_10">

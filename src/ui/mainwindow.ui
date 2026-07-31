@@ -140,7 +140,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                    <x>0</x>
                    <y>0</y>
                    <width>956</width>
-                   <height>816</height>
+                   <height>814</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_4">
@@ -630,7 +630,7 @@ int main(int, char**)
                       <number>0</number>
                      </property>
                      <item row="0" column="0">
-                      <widget class="QPushButton" name="pushButton_1">
+                      <widget class="QPushButton" name="backButton_page1">
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
 	font-family: &quot;IBM Plex Mono&quot;;
@@ -654,7 +654,7 @@ QPushButton:hover {
                       </widget>
                      </item>
                      <item row="0" column="2">
-                      <widget class="QPushButton" name="pushButton_3">
+                      <widget class="QPushButton" name="skipButton_page1">
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
 	font-family: &quot;IBM Plex Mono&quot;;
@@ -678,7 +678,7 @@ QPushButton:hover {
                       </widget>
                      </item>
                      <item row="0" column="1">
-                      <widget class="QPushButton" name="pushButton_2">
+                      <widget class="QPushButton" name="nextButton_page1">
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
 	font-family: &quot;IBM Plex Mono&quot;;
@@ -922,7 +922,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                    <x>0</x>
                    <y>0</y>
                    <width>958</width>
-                   <height>684</height>
+                   <height>714</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
@@ -1310,7 +1310,7 @@ QRadioButton::indicator:checked {
                       <number>6</number>
                      </property>
                      <item row="0" column="0">
-                      <widget class="QPushButton" name="pushButton_4">
+                      <widget class="QPushButton" name="backButton_page2">
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
 	font-family: &quot;IBM Plex Mono&quot;;
@@ -1334,7 +1334,7 @@ QPushButton:hover {
                       </widget>
                      </item>
                      <item row="0" column="1">
-                      <widget class="QPushButton" name="pushButton_5">
+                      <widget class="QPushButton" name="nextButton_page2">
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
 	font-family: &quot;IBM Plex Mono&quot;;
@@ -1357,7 +1357,7 @@ QPushButton:hover {
                       </widget>
                      </item>
                      <item row="0" column="2">
-                      <widget class="QPushButton" name="pushButton_6">
+                      <widget class="QPushButton" name="skipButton_page2">
                        <property name="styleSheet">
                         <string notr="true">QPushButton {
 	font-family: &quot;IBM Plex Mono&quot;;
@@ -1538,7 +1538,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                    <x>0</x>
                    <y>0</y>
                    <width>958</width>
-                   <height>684</height>
+                   <height>714</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_10">
@@ -1561,7 +1561,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                       <number>9</number>
                      </property>
                      <item row="0" column="0">
-                      <widget class="QPushButton" name="pushButton_7">
+                      <widget class="QPushButton" name="backButton_page3">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1591,7 +1591,7 @@ QPushButton:hover {
                       </widget>
                      </item>
                      <item row="0" column="1">
-                      <widget class="QPushButton" name="pushButton_8">
+                      <widget class="QPushButton" name="nextButton_page3">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>
@@ -1643,7 +1643,7 @@ QPushButton:hover {
                       </spacer>
                      </item>
                      <item row="0" column="2">
-                      <widget class="QPushButton" name="pushButton_9">
+                      <widget class="QPushButton" name="skipButton_page3">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                          <horstretch>0</horstretch>

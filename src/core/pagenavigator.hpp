@@ -4,11 +4,21 @@
 #include <QStackedWidget>
 #include <vector>
 #include <qdebug.h>
+#include "pageFiller.hpp"
+#include "fabricQuest.hpp"
+#include "question.hpp"
+
+// нужно вложить общее количество страниц, то есть сколько вообще их
 
 class PageNavigator
 {
 public:
-    explicit PageNavigator(QStackedWidget *stack) : m_stack(stack) {}
+    explicit PageNavigator(QStackedWidget *stack, FabricQuest* m_fabQuest, PageFiller* m_pageFiller , int totalPage)
+                         : m_stack(stack), m_fabricQuest(m_fabQuest), m_pageFill(m_pageFiller), totalPage(totalPage), currentPage(0) 
+    {
+        
+        m_stack->setCurrentIndex(currentPage);
+    }
 
     void goToPage(int index)
     {
@@ -18,8 +28,17 @@ public:
         m_stack->setCurrentIndex(index);
     }
 
-    void next() { goToPage(m_stack->currentIndex() + 1); }
-    void previous() { goToPage(m_stack->currentIndex() - 1); }
+    void next() { 
+        if(currentPage >= m_fabricQuest->getSizeQuestion(0) - 1)
+            return;
+        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, ++currentPage));
+    }
+
+    void previous() {
+        if(currentPage <= 0)
+            return;
+        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, --currentPage));
+    }
 
     void getCount()
     {
@@ -28,5 +47,8 @@ public:
 
 private:
     QStackedWidget *m_stack;
-    std::vector<int> questionPage;
+    FabricQuest* m_fabricQuest;
+    PageFiller* m_pageFill;
+    int currentPage;
+    int totalPage;
 };

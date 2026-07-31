@@ -30,13 +30,15 @@ public:
     void next() { 
         if(currentPage >= m_fabricQuest->getSizeQuestion(0) - 1)
             return;
-        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, ++currentPage));
+        ++currentPage;
+        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, currentPage), currentPage + 1, totalPage);
     }
 
     void previous() {
         if(currentPage <= 0)
             return;
-        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, --currentPage));
+        --currentPage;
+        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, currentPage), currentPage + 1, totalPage);
     }
 
     void getCount()

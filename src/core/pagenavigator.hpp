@@ -2,11 +2,10 @@
 #pragma once
 
 #include <QStackedWidget>
-#include <vector>
 #include <qdebug.h>
 #include "pageFiller.hpp"
 #include "fabricQuest.hpp"
-#include "question.hpp"
+
 
 // нужно вложить общее количество страниц, то есть сколько вообще их
 

@@ -14,7 +14,7 @@ public:
     PageFiller(Ui::MainWindow* ui) : ui(ui) {
         highlighter_page1 = new CppSyntaxHighlighter(ui->bodyCode_page1->document());
     };
-    void fillPage_1(std::shared_ptr<Question> Quest);
+    void fillPage_1(std::shared_ptr<Question> Quest, const int& current, const int& total);
     void fillPage_2(std::shared_ptr<Question> Quest);
     void fillPage_3(std::shared_ptr<Question> Quest);
 private:
@@ -22,8 +22,9 @@ private:
     CppSyntaxHighlighter *highlighter_page1 = nullptr;
 
 };
-inline void PageFiller::fillPage_1(std::shared_ptr<Question> Quest)
+inline void PageFiller::fillPage_1(std::shared_ptr<Question> Quest, const int& current, const int& total)
 {
+    ui->browTitle_page1->setText(QString("Вопрос %1 из %2").arg(current).arg(total));
     ui->bodyTitle_page1->setText(Quest->getBodyTitle());
     ui->browCode_page1->setText(Quest->getBrowCode());
     ui->bodyCode_page1->setPlainText(Quest->getBodyCode());

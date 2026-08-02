@@ -270,24 +270,23 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QRadioButton {
-    background-color: rgb(17, 23, 24);
+	background-color: rgb(27, 44, 36);
     color: rgb(199, 212, 210);
-    border: 2px solid rgb(33, 48, 50);
+    border: 2px solid rgb(76, 186, 114);
     border-radius: 6px;
     padding-left: 16px;
 }
 
 QRadioButton:hover {
     background-color: rgb(22, 30, 32);
-    border-color: rgb(51, 64, 63);
 }
 
 QRadioButton::indicator {
     width: 14px;
     height: 14px;
     border-radius: 8px;
-    border: 2px solid rgb(51, 64, 63);
-    background-color: rgb(17, 23, 24);
+    border: 2px solid rgb(76, 156, 114);
+    background-color: rgb(76, 186, 114);
 }
 
 QRadioButton::indicator:hover {
@@ -341,24 +340,23 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QRadioButton {
-    background-color: rgb(17, 23, 24);
+	background-color: rgb(44, 31, 31);
     color: rgb(199, 212, 210);
-    border: 2px solid rgb(33, 48, 50);
+    border: 2px solid rgb(241, 90, 82);
     border-radius: 6px;
     padding-left: 16px;
 }
 
 QRadioButton:hover {
     background-color: rgb(22, 30, 32);
-    border-color: rgb(51, 64, 63);
 }
 
 QRadioButton::indicator {
     width: 14px;
     height: 14px;
     border-radius: 8px;
-    border: 2px solid rgb(51, 64, 63);
-    background-color: rgb(17, 23, 24);
+    border: 2px solid rgb(241, 50, 82);
+    background-color: rgb(241, 90, 82);
 }
 
 QRadioButton::indicator:hover {
@@ -412,24 +410,23 @@ QRadioButton[resultState=&quot;wrong&quot;] {
                        </property>
                        <property name="styleSheet">
                         <string notr="true">QRadioButton {
-    background-color: rgb(17, 23, 24);
+    background-color: rgb(29, 27, 20);
     color: rgb(199, 212, 210);
-    border: 2px solid rgb(33, 48, 50);
+    border: 2px solid rgb(229, 159, 50);
     border-radius: 6px;
     padding-left: 16px;
 }
 
 QRadioButton:hover {
     background-color: rgb(22, 30, 32);
-    border-color: rgb(51, 64, 63);
 }
 
 QRadioButton::indicator {
     width: 14px;
     height: 14px;
     border-radius: 8px;
-    border: 2px solid rgb(51, 64, 63);
-    background-color: rgb(17, 23, 24);
+    background-color: rgb(255, 179, 57);
+    border: 2px solid rgb(190, 127, 0);
 }
 
 QRadioButton::indicator:hover {
@@ -727,11 +724,26 @@ QPushButton:hover {
                    <widget class="QWidget" name="titleWidget_page1" native="true">
                     <property name="maximumSize">
                      <size>
-                      <width>16777215</width>
+                      <width>800</width>
                       <height>16777215</height>
                      </size>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>6</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>9</number>
+                     </property>
                      <item>
                       <widget class="QLabel" name="browTitle_page1">
                        <property name="sizePolicy">
@@ -742,7 +754,7 @@ QPushButton:hover {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>16777215</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -773,7 +785,7 @@ QPushButton:hover {
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>710</width>
+                         <width>16777215</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -928,8 +940,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>325</width>
-                   <height>748</height>
+                   <width>958</width>
+                   <height>714</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
@@ -966,7 +978,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">QLabel#questionEyebrowLabel_2 {
+                        <string notr="true">QLabel#browTitle_page2 {
     color: rgb(255, 178, 56);
     border: none;
 }</string>
@@ -1544,8 +1556,8 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>383</width>
-                   <height>773</height>
+                   <width>958</width>
+                   <height>714</height>
                   </rect>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_10">
@@ -2107,7 +2119,7 @@ QCheckBox::indicator:checked {
                         </font>
                        </property>
                        <property name="styleSheet">
-                        <string notr="true">QLabel#questionEyebrowLabel_3 {
+                        <string notr="true">QLabel#browTitle_page3 {
     color: rgb(255, 178, 56);
     border: none;
 }</string>

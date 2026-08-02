@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     m_pageFiiler = std::make_shared<PageFiller>(ui);
     m_fabricQuest = std::make_shared<FabricQuest>();
     initializeFullPage();          // хардкодим вопросы в m_factory
-    m_navigator = std::make_shared<PageNavigator>(ui->stackedWidget, m_fabricQuest, m_pageFiiler, m_fabricQuest->totalPage());
+    m_navigator = std::make_shared<PageNavigator>(ui->stackedWidget, m_fabricQuest, m_pageFiiler);
 }
 
 MainWindow::~MainWindow() { delete ui;} 

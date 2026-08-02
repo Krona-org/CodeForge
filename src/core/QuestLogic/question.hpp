@@ -3,8 +3,7 @@
 
 #include <QString>
 #include <QVector>
-#include <atomic>
-#include <qcontainerfwd.h>
+
 
 struct AnswerOption 
 {
@@ -15,21 +14,24 @@ struct AnswerOption
 class Question 
 {
 public:
-    Question(int var, QString BodyTitle, QString BrowCode, QString BodyCode,
-                QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer);
-    virtual ~Question() = default;
-    int getVarIndex();
-    int getGlobalId();
-    QString getBrowTitle();
-    QString getBodyTitle();
-    QString getBrowCode();
-    QString getBodyCode();
-    QString getBrowSolution();
-    QString getBodySolution();
-    const QVector<AnswerOption>& getAnswer() const;
+    Question(int var,
+             QString BodyTitle,
+             QString BrowCode,
+             QString BodyCode,
+             QString BrowSolution,
+             QString BodySolution,
+             QVector<AnswerOption> Answer);
 
-private:
-    int countGlobalId();
+    int getVarIndex() const;
+    int getGlobalId() const;
+
+    QString getBrowTitle() const;
+    QString getBodyTitle() const;
+    QString getBrowCode() const;
+    QString getBodyCode() const;
+    QString getBrowSolution() const;
+    QString getBodySolution() const;
+    const QVector<AnswerOption>& getAnswer() const;
 
 private:
     int varQuest;
@@ -43,8 +45,13 @@ private:
     QVector<AnswerOption> answer;
 };
 
-inline Question::Question(int var, QString BodyTitle, QString BrowCode, QString BodyCode,
-                            QString BrowSolution, QString BodySolution, QVector<AnswerOption> Answer)
+inline Question::Question(int var,
+                          QString BodyTitle,
+                          QString BrowCode,
+                          QString BodyCode,
+                          QString BrowSolution,
+                          QString BodySolution,
+                          QVector<AnswerOption> Answer)
 {
     this->varQuest = var;
     this->bodyTitle = BodyTitle;
@@ -53,21 +60,14 @@ inline Question::Question(int var, QString BodyTitle, QString BrowCode, QString 
     this->browSolution = BrowSolution;
     this->bodySolution = BodySolution;
     this->answer = Answer;
-    globalId = countGlobalId();
 }
 
-inline int Question::countGlobalId() 
-{
-    static std::atomic<int> temp = 0;
-    return temp++;
-}
-
-inline int Question::getVarIndex()         { return this->varQuest; }
-inline int Question::getGlobalId()         { return globalId; }
-inline QString Question::getBrowTitle()    { return browTitle; }
-inline QString Question::getBodyTitle()    { return bodyTitle; }
-inline QString Question::getBrowCode()     { return browCode; }
-inline QString Question::getBodyCode()     { return bodyCode; }
-inline QString Question::getBrowSolution() { return browSolution; }
-inline QString Question::getBodySolution() { return bodySolution; }
+inline int Question::getVarIndex() const                        { return varQuest; }
+inline int Question::getGlobalId() const                        { return globalId; }
+inline QString Question::getBrowTitle() const                   { return browTitle; }
+inline QString Question::getBodyTitle() const                   { return bodyTitle; }
+inline QString Question::getBrowCode() const                    { return browCode; }
+inline QString Question::getBodyCode() const                    { return bodyCode; }
+inline QString Question::getBrowSolution() const                { return browSolution; }
+inline QString Question::getBodySolution() const                { return bodySolution; }
 inline const QVector<AnswerOption>& Question::getAnswer() const { return answer; } 

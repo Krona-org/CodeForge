@@ -3,7 +3,9 @@
 
 #include <QStackedWidget>
 #include <memory>
+#include <qcontainerfwd.h>
 #include <qdebug.h>
+#include <qiterable.h>
 #include "pageFiller.hpp"
 #include "fabricQuest.hpp"
 
@@ -52,6 +54,7 @@ private:
     QStackedWidget* m_stack;
     std::shared_ptr<FabricQuest> m_fabricQuest;
     std::shared_ptr<PageFiller> m_pageFill;
+    //QIterator<QVector<>>
     int currentPage;
     int totalPage;
 };

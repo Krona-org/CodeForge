@@ -35,6 +35,7 @@ inline void PageFiller::fillPage_1(std::shared_ptr<Question> Quest, const int& c
     // ui->answerButton3_page1
     // ui->answerButton4_page1
     CodeSize::fitCodeEditHeight(ui->bodyCode_page1);   // <-- добавить
+    ui->scrollArea->verticalScrollBar()->setValue(0);
 
 }
 inline void PageFiller::fillPage_2(std::shared_ptr<Question> Quest)

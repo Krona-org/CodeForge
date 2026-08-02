@@ -20,7 +20,7 @@ public:
     {
         
         m_stack->setCurrentIndex(currentPage);
-        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
+        m_pageFill->fillPage(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
     }
 
     void goToPage(int index)
@@ -35,14 +35,16 @@ public:
         if(currentPage >= m_fabricQuest->getSize() - 1)
             return;
         ++currentPage;
-        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
+        goToPage(m_fabricQuest->getCurrentVar(currentPage));
+        m_pageFill->fillPage(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
     }
 
     void previous() {
         if(currentPage <= 0)
             return;
         --currentPage;
-        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
+        goToPage(m_fabricQuest->getCurrentVar(currentPage));
+        m_pageFill->fillPage(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
     }
 
     void getCount()

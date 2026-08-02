@@ -15,12 +15,12 @@
 class PageNavigator
 {
 public:
-    explicit PageNavigator(QStackedWidget* stack, std::shared_ptr<FabricQuest> m_fabQuest, std::shared_ptr<PageFiller> m_pageFiller , int totalPage)
-                         : m_stack(stack), m_fabricQuest(m_fabQuest), m_pageFill(m_pageFiller), totalPage(totalPage), currentPage(0) 
+    explicit PageNavigator(QStackedWidget* stack, std::shared_ptr<FabricQuest> m_fabQuest, std::shared_ptr<PageFiller> m_pageFiller)
+                         : m_stack(stack), m_fabricQuest(m_fabQuest), m_pageFill(m_pageFiller), totalPage(m_fabQuest->getSize()), currentPage(0) 
     {
         
         m_stack->setCurrentIndex(currentPage);
-        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, currentPage), currentPage + 1, totalPage);
+        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
     }
 
     void goToPage(int index)
@@ -32,17 +32,17 @@ public:
     }
 
     void next() { 
-        if(currentPage >= m_fabricQuest->getSizeQuestion(0) - 1)
+        if(currentPage >= m_fabricQuest->getSize() - 1)
             return;
         ++currentPage;
-        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, currentPage), currentPage + 1, totalPage);
+        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
     }
 
     void previous() {
         if(currentPage <= 0)
             return;
         --currentPage;
-        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(0, currentPage), currentPage + 1, totalPage);
+        m_pageFill->fillPage_1(m_fabricQuest->getQuestion(currentPage), currentPage + 1, totalPage);
     }
 
     void getCount()

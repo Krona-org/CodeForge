@@ -18,6 +18,7 @@ public:
                     QVector<AnswerOption> Answer);
 
     int getSize();
+    int getCurrentVar(int index);
     std::shared_ptr<Question> getQuestion(int indexPage) const;
 
 private:
@@ -25,6 +26,7 @@ private:
 };
 
 inline int FabricQuest::getSize() { return v_question.size(); }
+inline int FabricQuest::getCurrentVar(int index) {return v_question.at(index)->getVarIndex(); }
 inline void FabricQuest::push_back(int indexPage, QString BodyTitle,
                     QString BrowCode, QString BodyCode,
                     QString BrowSolution, QString BodySolution,
